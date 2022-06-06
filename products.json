@@ -1,0 +1,12 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "productName": "test product",
+            "productDescription": "test description",
+            "productSize": "test size",
+            "productPrice": 5.99,
+            "productImageURL": "https://picsum.photos/200/300"
+        }
+    ]
+}
