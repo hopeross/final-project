@@ -1,12 +1,40 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "productName": "test product",
-            "productDescription": "test description",
-            "productSize": "test size",
-            "productPrice": 5.99,
-            "productImageURL": "https://picsum.photos/200/300"
-        }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "productName": "test product",
+      "productDescription": "test description",
+      "productSize": "test size",
+      "productPrice": 5.99,
+      "productImageURL": "https://picsum.photos/200/300",
+      "productInStock": true
+    },
+    {
+      "id": 2,
+      "productName": "new test",
+      "productDescription": "new description out of stock",
+      "productSize": "medium",
+      "productPrice": "15.99",
+      "productImageURL": "",
+      "productInStock": false
+    },
+    {
+      "id": 3,
+      "productName": "one test",
+      "productDescription": "one description",
+      "productSize": "one",
+      "productPrice": "1",
+      "productImageURL": "",
+      "productInStock": true
+    },
+    {
+      "id": 4,
+      "productName": "two test",
+      "productDescription": "two",
+      "productSize": "two",
+      "productPrice": "2",
+      "productImageURL": "",
+      "productInStock": true
+    }
+  ]
 }
