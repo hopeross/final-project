@@ -5,4 +5,5 @@ export class Products {
     productSize: string = "";
     productPrice: number = 0;
     productImageURL: string = "";
+    productInStock: boolean = true;
 }

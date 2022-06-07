@@ -1,6 +1,10 @@
 <div>
     <h1>Our Products</h1>
-    <button>Add New Product</button>
-    <p>Product One</p>
-    <p>Product Two</p> 
+    <button [routerLink]="['/create']">Add New Product</button>
+    <li *ngFor="let product of productList">
+        {{product.productName}}
+        {{product.productDescription}}
+        <button [routerLink]='["/edit", product.id]'>EDIT</button>
+    </li>
 </div>
+
