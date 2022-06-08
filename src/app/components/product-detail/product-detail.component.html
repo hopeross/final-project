@@ -1,0 +1,13 @@
+<h1>Product Details</h1>
+<div class="container"> 
+    <div class="standardItem">
+        <img src={{currentProduct.productImageURL}} class="productImage">
+    </div> 
+    <div class="standardItem">
+        <p class="title">{{currentProduct.productName}}</p>
+        <p class="description">{{currentProduct.productDescription}}</p>
+        <p>${{currentProduct.productPrice}}, {{currentProduct.productSize}}</p>
+        <p *ngIf="!currentProduct.productInStock" class="outOfStock">Sad panda, this is currently out of stock.</p>
+    </div>
+
+</div>

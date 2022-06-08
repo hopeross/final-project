@@ -1,7 +1,11 @@
-
-<nav>
-    <button [routerLink]='[""]'>HOME</button>
-    <button [routerLink]='["/about"]'>ABOUT</button>
-    <button [routerLink]='["/products"]'>PRODUCTS</button>
+<nav class="navBar">
+    <img class="navLogo" src="../assets/images/logo2.png">
+    <button [routerLink]='[""]' class="navBarItem">HOME</button>
+    <button [routerLink]='["/about"]' class="navBarItem">ABOUT</button>
+    <button [routerLink]='["/products"]' class="navBarItem">PRODUCTS</button>
 </nav>
 <router-outlet></router-outlet>
+<footer>
+    <p>&#169; 2022 company name</p>
+    <p>Site created by me</p>
+</footer>
