@@ -1,10 +1,19 @@
-<div>
-    <h1>Our Products</h1>
-    <button [routerLink]="['/create']">Add New Product</button>
-    <li *ngFor="let product of productList">
-        {{product.productName}}
-        {{product.productDescription}}
-        <button [routerLink]='["/edit", product.id]'>EDIT</button>
+<div class="containerWithButton">
+    <h1 >Our Products</h1>
+    <button [routerLink]="['/create']" class="headerButton">Add New Product</button>
+</div>
+
+<div class="searchBar">
+    
+
+</div>
+
+<div class="summaryContainer">
+    <li *ngFor="let product of productList" class="summaryTile">
+        <img src={{product.productImageURL}} class="summaryTileImage" >
+        <p class="summaryInfo">{{product.productName}}, ${{product.productPrice}}</p>
+        <button [routerLink]='["/view", product.id]' class="summaryButton">VIEW</button>
+        <button [routerLink]='["/edit", product.id]' class="summaryButton">EDIT</button>
     </li>
 </div>
 
