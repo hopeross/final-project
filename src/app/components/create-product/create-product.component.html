@@ -1,28 +1,35 @@
 <div>
     <h1>Create New Product</h1>
-    <form  #form="ngForm" (ngSubmit)="onSubmit()">
-    <!-- <form [formGroup]="productForm" (ngSubmit)="onSubmit()"> -->
-        <label>Product Name: </label>
-        <input type="text" name="name" [(ngModel)]="newProduct.productName">
-        <label>Product Description: </label>
-        <input type="text" name="description" [(ngModel)]="newProduct.productDescription">
-        <label>Product Size: </label>
-        <!-- <select formControlName="size">
-            <option [ngValue]="null" disabled>Select Product Size</option>
-            <option *ngFor="let size of sizes" [ngValue]="size.id">{{size.size}}</option>
-        </select> -->
-
-        <!-- <select [(ngModel)]="sizes">
-            <option *ngFor="let size of sizes" [ngValue]="size.id">{{size.size}}</option>
-          </select> -->
-
-        <input type="text" name="size" [(ngModel)]="newProduct.productSize">
-        <label>Product Price: </label>
-        <input type="text" name="price" [(ngModel)]="newProduct.productPrice">
-        <label>Image URL: </label>
-        <input type="text" name="url" [(ngModel)]="newProduct.productImageURL">
-        <label>In Stock? </label>
-        <input type="checkbox" name="stock" [(ngModel)]="newProduct.productInStock">
-        <button type="submit" class="singleButton">SAVE PRODUCT</button>
+    <form #form="ngForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill">
+            <mat-label>Product Name</mat-label>
+            <input matInput name="name" [(ngModel)]="newProduct.productName">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Product Description</mat-label>
+            <input matInput name="description" [(ngModel)]="newProduct.productDescription">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Product Size</mat-label>
+            <mat-select [(value)]="selected" class="dropdown">
+                <mat-option value="xsmall">Extra Small</mat-option>
+                <mat-option value="small">Small</mat-option>
+                <mat-option value="medium">Medium</mat-option>
+                <mat-option value="large">Large</mat-option>
+                <mat-option value="xlarge">Extra Large</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Product Price</mat-label>
+            <input matInput type="number" name="price" [(ngModel)]="newProduct.productPrice">
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Image URL</mat-label>
+            <input matInput name="url" [(ngModel)]="newProduct.productImageURL">
+          </mat-form-field>
+          <section>
+              <mat-checkbox name="stock" [(ngModel)]="newProduct.productInStock">In Stock?</mat-checkbox>
+          </section>
+          <button type="submit" class="singleButton">SAVE PRODUCT</button>
     </form>
 </div>

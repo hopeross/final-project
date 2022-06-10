@@ -35,4 +35,9 @@ export class ProductService {
   deleteProductById(id: number): Observable<any> {
     return this.http.delete<any>(this.dataSource + "/" + id);
   }
+
+  searchForProduct(searchPhrase: string): Observable<Products> {
+    console.log(this.http.get<Products>(this.dataSource + "?" + searchPhrase));
+    return this.http.get<Products>(this.dataSource + "?" + searchPhrase)
+  }
 }

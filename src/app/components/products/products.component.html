@@ -3,10 +3,9 @@
     <button [routerLink]="['/create']" class="headerButton">Add New Product</button>
 </div>
 
-<div class="searchBar">
-    
-
-</div>
+<!-- <div class="searchBar">
+    <input matInput type="text"  [(ngModel)]="searchPhrase"(input)="searchThis()">
+</div> -->
 
 <div class="summaryContainer">
     <li *ngFor="let product of productList" class="summaryTile">
@@ -14,6 +13,7 @@
         <p class="summaryInfo">{{product.productName}}, ${{product.productPrice}}</p>
         <button [routerLink]='["/view", product.id]' class="summaryButton">VIEW</button>
         <button [routerLink]='["/edit", product.id]' class="summaryButton">EDIT</button>
+        <button (click)="onDelete(product.id)" class="summaryButton">DELETE PRODUCT</button>
     </li>
 </div>
 

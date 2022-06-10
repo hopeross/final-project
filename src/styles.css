@@ -31,13 +31,26 @@ form {
     flex-direction: column;
     max-width: 50%;
     margin: auto;
-    background-color: #999999;
+    background-color: #CCCCCC;
     margin-top: 1em;
     box-shadow: 2px 3px #675491;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+mat-form-field {
+    margin:0;
+    padding: 0;
+    background-color: #CCCCCC;
+}
+
+mat-label {
+    color: #675491;
 }
 
 form button {
     font-size: large;
+    margin-top: 1em;
 }
 
 input {
@@ -45,10 +58,6 @@ input {
     margin: auto;
     font-size: medium;
     margin-bottom: 2em;
-}
-
-label {
-    color: white;
 }
 
 div {
@@ -73,12 +82,18 @@ footer {
     background-color: #999999;
     display: flex;
     align-items: center;
+    height: 2em;
 }
 
 .navBarItem {
     background-color: #999999;
     font-size: large;
     color: white;
+    margin: .5em;
+}
+
+.navBarItem:hover {
+    border: 1px solid white;
 }
 
 .navLogo {
@@ -169,3 +184,20 @@ footer {
     margin: auto;
     margin-bottom: 1em;
 }
+
+.editPage {
+    display: flex;
+    flex-direction: row;
+}
+
+.editPageItem {
+    margin: 2em;
+    width: 50%;
+}
+
+.editPage img {
+    max-width: 20em;
+    max-height: 20em;
+}
+
+
