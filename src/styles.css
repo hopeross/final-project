@@ -196,8 +196,47 @@ footer {
 }
 
 .editPage img {
-    max-width: 20em;
-    max-height: 20em;
+    height: 15em;
 }
 
+.searchBar {
+    border: 2px solid hotpink;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Gentium Plus', serif;
+    font-size: larger;
+    align-items: baseline;
+}
+
+.searchBar label {
+    font-size: small;
+    color: #999999;
+    text-align: left;
+    align-items: left;
+}
+
+.leftSearchBar input {
+    margin: 0;
+    max-width: 15em;
+    color: #675491;
+    font-size: large;
+    border: 1px solid #999999;
+}
+
+.leftSearchBar button {
+    border-radius: 50%;
+}
+
+.middleSearchBar button {
+    margin: 0;
+    font-size: large;
+}
+
+.rightSearchBar input {
+    max-width: 2em;
+    font-size: large;
+    border: 1px solid #999999;
+    color: #675491;
+}
 

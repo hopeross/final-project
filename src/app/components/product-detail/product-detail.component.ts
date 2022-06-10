@@ -27,7 +27,6 @@ export class ProductDetailComponent implements OnInit {
   onDelete(id: number){
     this.productService.deleteProductById(id).subscribe( response => {
       this.router.navigateByUrl("/products");
-      // window.location.reload();
     })
   }
 }

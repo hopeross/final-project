@@ -12,7 +12,9 @@ import { Output, EventEmitter } from '@angular/core';
 
 export class ProductsComponent implements OnInit {
   productList: Products[] = [];
-  // searchPhrase: string;
+  searchPhrase: string = '';
+  lowNum: number = 0;
+  highNum: number = 0;
 
   constructor(private productService: ProductService, private router: Router) { }
 
@@ -29,9 +31,27 @@ export class ProductsComponent implements OnInit {
     })
   }
 
-  // searchThis(){
-  //   this.productService.searchForProduct(this.searchPhrase).subscribe(results =>{
-  //     this.productList = results;
-  //   })
-  // }
+  searchByName(){
+    this.productService.searchForProduct(this.searchPhrase).subscribe(results =>{
+      this.productList = results;
+    })
+  }
+
+  sortAscending(){
+    this.productService.sortByNameAscending().subscribe(results =>{
+      this.productList = results;
+    })
+  }
+
+  sortDescending(){
+    this.productService.sortByNameDescending().subscribe(results =>{
+      this.productList = results;
+    })
+  }
+
+  filterByPrice(){
+    this.productService.filterByPrice(this.lowNum, this.highNum).subscribe(results =>{
+      this.productList = results;
+    })
+  }
 }

@@ -1,19 +1,34 @@
 <div class="containerWithButton">
-    <h1 >Our Products</h1>
+    <h1>Our Products</h1>
     <button [routerLink]="['/create']" class="headerButton">Add New Product</button>
 </div>
 
-<!-- <div class="searchBar">
-    <input matInput type="text"  [(ngModel)]="searchPhrase"(input)="searchThis()">
-</div> -->
+<div class="searchBar">
+    <div class="leftSearchBar">
+        <input matInput type="text" [(ngModel)]="searchPhrase" class="searchBarItem" matTooltip="Search" matTooltipPosition="above">
+        <button (click)="searchByName()" class="searchBarItem">
+            <mat-icon>search</mat-icon>
+        </button>
+    </div>
+    <div class="middleSearchBar">
+        <button (click)="sortAscending()" class="searchBarItem" matTooltip="Sort by title ascending" matTooltipPosition="above">A-Z</button>
+        <button (click)="sortDescending()" class="searchBarItem" matTooltip="Sort by title descending" matTooltipPosition="above">Z-A</button>
+    </div>
+    <div class="rightSearchBar">
+        <input matInput type="number" [(ngModel)]="lowNum" class="searchBarItem">
+        <input matInput type="number" [(ngModel)]="highNum" class="searchBarItem">
+        <button (click)="filterByPrice()" class="searchBarItem" matTooltip="Filter by price range" matTooltipPosition="above">
+            <mat-icon>filter_list</mat-icon>
+        </button>
+    </div>
+</div>
 
 <div class="summaryContainer">
     <li *ngFor="let product of productList" class="summaryTile">
-        <img src={{product.productImageURL}} class="summaryTileImage" >
+        <img src={{product.productImageURL}} class="summaryTileImage">
         <p class="summaryInfo">{{product.productName}}, ${{product.productPrice}}</p>
         <button [routerLink]='["/view", product.id]' class="summaryButton">VIEW</button>
         <button [routerLink]='["/edit", product.id]' class="summaryButton">EDIT</button>
         <button (click)="onDelete(product.id)" class="summaryButton">DELETE PRODUCT</button>
     </li>
 </div>
-
