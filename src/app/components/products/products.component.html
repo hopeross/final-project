@@ -1,19 +1,32 @@
 <div class="containerWithButton">
-    <h1 >Our Products</h1>
+    <h1>Our Products</h1>
     <button [routerLink]="['/create']" class="headerButton">Add New Product</button>
 </div>
 
 <div class="searchBar">
-    
-
+    <div class="leftSearchBar">
+        <input matInput type="text" [(ngModel)]="searchPhrase" matTooltip="Search" matTooltipPosition="above">
+        <button (click)="searchByName()">
+            <mat-icon>search</mat-icon>
+        </button>
+    </div>
+    <div class="rightSearchBar">
+        <button (click)="sortAscending()" matTooltip="Sort by title ascending" matTooltipPosition="above">A-Z</button>
+        <button (click)="sortDescending()" matTooltip="Sort by title descending" matTooltipPosition="above">Z-A</button>
+        <input type="number" value="10" [(ngModel)]="lowNum" class="searchBarItem">
+        <input type="number" value="20" [(ngModel)]="highNum">
+        <button (click)="filterByPrice()" matTooltip="Filter by price range" matTooltipPosition="above">
+            <mat-icon>filter_list</mat-icon>
+        </button>
+    </div>
 </div>
 
 <div class="summaryContainer">
     <li *ngFor="let product of productList" class="summaryTile">
-        <img src={{product.productImageURL}} class="summaryTileImage" >
+        <img src={{product.productImageURL}} class="summaryTileImage">
         <p class="summaryInfo">{{product.productName}}, ${{product.productPrice}}</p>
         <button [routerLink]='["/view", product.id]' class="summaryButton">VIEW</button>
         <button [routerLink]='["/edit", product.id]' class="summaryButton">EDIT</button>
+        <button (click)="onDelete(product.id)" class="summaryButton">DELETE PRODUCT</button>
     </li>
 </div>
-

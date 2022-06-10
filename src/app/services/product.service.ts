@@ -35,4 +35,20 @@ export class ProductService {
   deleteProductById(id: number): Observable<any> {
     return this.http.delete<any>(this.dataSource + "/" + id);
   }
+
+  searchForProduct(searchPhrase: string): Observable<Products[]> {
+    return this.http.get<Products[]>(this.dataSource + "?q=" + searchPhrase)
+  }
+
+  sortByNameAscending(): Observable<Products[]> {
+    return this.http.get<Products[]>(this.dataSource + "?_sort=productName&_order=asc")
+  }
+
+  sortByNameDescending(): Observable<Products[]> {
+    return this.http.get<Products[]>(this.dataSource + "?_sort=productName&_order=desc")
+  }
+
+  filterByPrice(low: number, high: number): Observable<Products[]> {
+    return this.http.get<Products[]>(this.dataSource + "?productPrice_gte=" + low + "&productPrice_lte=" + high)
+  }
 }

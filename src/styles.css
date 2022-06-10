@@ -27,17 +27,28 @@ button:hover {
 
 form {
     border: 1px solid #999999;
-    display: flex;
-    flex-direction: column;
     max-width: 50%;
     margin: auto;
-    background-color: #999999;
+    background-color: #CCCCCC;
     margin-top: 1em;
     box-shadow: 2px 3px #675491;
+    font-size: medium;
+}
+
+mat-form-field {
+    margin: auto;
+    padding: 0;
+    background-color: #CCCCCC;
+    max-width: 95%;
+}
+
+mat-label {
+    color: #675491;
 }
 
 form button {
     font-size: large;
+    margin-top: 1em;
 }
 
 input {
@@ -45,10 +56,6 @@ input {
     margin: auto;
     font-size: medium;
     margin-bottom: 2em;
-}
-
-label {
-    color: white;
 }
 
 div {
@@ -73,12 +80,18 @@ footer {
     background-color: #999999;
     display: flex;
     align-items: center;
+    height: 2em;
 }
 
 .navBarItem {
     background-color: #999999;
     font-size: large;
     color: white;
+    margin: .5em;
+}
+
+.navBarItem:hover {
+    border: 1px solid white;
 }
 
 .navLogo {
@@ -168,4 +181,64 @@ footer {
     max-width: 50%;
     margin: auto;
     margin-bottom: 1em;
+}
+
+.editPage {
+    display: flex;
+    flex-direction: row;
+}
+
+.editPageItem {
+    margin: 2em;
+    width: 50%;
+}
+
+.editPage img {
+    height: 15em;
+}
+
+.searchBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Gentium Plus', serif;
+    font-size: larger;
+    align-items: baseline;
+}
+
+
+
+.searchBar label {
+    font-size: small;
+    color: #999999;
+    text-align: left;
+    align-items: left;
+}
+
+.leftSearchBar input {
+    margin: 0;
+    max-width: 15em;
+    color: #675491;
+    font-size: large;
+    border: 1px solid #999999;
+}
+
+.leftSearchBar button {
+    border-radius: 50%;
+}
+
+.rightSearchBar button {
+    margin: 0;
+    font-size: large;
+}
+
+.rightSearchBar input {
+    max-width: 2em;
+    font-size: large;
+    border: 1px solid #999999;
+    color: #675491;
+}
+
+.searchBarItem {
+    margin-left: 1em;
 }

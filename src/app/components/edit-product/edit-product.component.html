@@ -1,18 +1,36 @@
-<div>
-    <h1>Edit Product</h1>
-    <form #form="ngForm" (ngSubmit)="onSubmit()">
-        <label>Product Name: </label>
-        <input type="text" name="name" [(ngModel)]="currentProduct.productName">
-        <label>Product Description: </label>
-        <input type="text" name="description" [(ngModel)]="currentProduct.productDescription">
-        <label>Product Size: </label>
-        <input type="text" name="size" [(ngModel)]="currentProduct.productSize">
-        <label>Product Price: </label>
-        <input type="number" name="price" [(ngModel)]="currentProduct.productPrice">
-        <label>Image URL: </label>
-        <input type="text" name="url" [(ngModel)]="currentProduct.productImageURL">
-        <label>In Stock? </label>
-        <input type="checkbox" name="stock" [(ngModel)]="currentProduct.productInStock">
+<h1>Edit Product</h1> 
+<div class="editPage">
+   <img src="{{currentProduct.productImageURL}}" class="editPageItem">
+    <form #form="ngForm" (ngSubmit)="onSubmit()" class="editPageItem">
+        <mat-form-field appearance="fill">
+            <mat-label>Product Name</mat-label>
+            <input matInput name="name" [(ngModel)]="currentProduct.productName">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Product Description</mat-label>
+            <input matInput name="description" [(ngModel)]="currentProduct.productDescription">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Product Size</mat-label>
+            <mat-select [(value)]="selected" class="dropdown">
+                <mat-option value="xsmall">Extra Small</mat-option>
+                <mat-option value="small">Small</mat-option>
+                <mat-option value="medium">Medium</mat-option>
+                <mat-option value="large">Large</mat-option>
+                <mat-option value="xlarge">Extra Large</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Product Price</mat-label>
+            <input matInput type="number" name="price" [(ngModel)]="currentProduct.productPrice">
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Image URL</mat-label>
+            <input matInput name="url" [(ngModel)]="currentProduct.productImageURL">
+          </mat-form-field>
+          <section>
+              <mat-checkbox name="stock" [(ngModel)]="currentProduct.productInStock">In Stock?</mat-checkbox>
+          </section>
         <div class="formButton">
             <button type="submit">SAVE CHANGES</button>
             <button (click)="onDelete(currentProduct.id)">DELETE PRODUCT</button>

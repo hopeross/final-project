@@ -2,3 +2,9 @@
     <h1>Dragonfaerie Design</h1>
     <img src="https://i.imgur.com/wPuuTPv.png">
 </div>
+<div class="summaryContainer">
+    <li *ngFor="let product of productList | slice:0:3; let i=index" class="summaryTile">
+        <img src={{product.productImageURL}} class="summaryTileImage" >
+        <p class="summaryInfo">{{product.productName}}</p>
+    </li>
+</div>

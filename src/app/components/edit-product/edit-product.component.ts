@@ -8,9 +8,11 @@ import { ProductService } from 'src/app/services/product.service';
   templateUrl: './edit-product.component.html',
   styleUrls: ['./edit-product.component.css']
 })
+
 export class EditProductComponent implements OnInit {
   id: number = 0;
   currentProduct: Products = new Products();
+  selected: string = '';
 
   constructor(private productService: ProductService, private router: Router, private aRoute: ActivatedRoute) { }
 
@@ -23,6 +25,10 @@ export class EditProductComponent implements OnInit {
   }
 
   onSubmit(){
+    if (this.selected != ''){
+      this.currentProduct.productSize = this.selected;
+    }
+
     this.productService.editProductById(this.id, this.currentProduct).subscribe(editedProduct => {
       this.router.navigateByUrl("/products");
     })

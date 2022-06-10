@@ -4,7 +4,7 @@
       "id": 1,
       "productName": "Black and White Willow",
       "productDescription": "Majestic willow tree over historic grave markers at the Nashville City Cemetary",
-      "productSize": "test size",
+      "productSize": "large",
       "productPrice": 12.99,
       "productImageURL": "https://i.imgur.com/03Ybsm5.jpg",
       "productInStock": true
@@ -13,7 +13,7 @@
       "id": 2,
       "productName": "Zen Pond",
       "productDescription": "Peaceful and colorful pond",
-      "productSize": "test size",
+      "productSize": "xlarge",
       "productPrice": 15.99,
       "productImageURL": "https://i.imgur.com/8VBiIuz.jpg",
       "productInStock": false
@@ -22,7 +22,7 @@
       "id": 3,
       "productName": "Fall Squirrel",
       "productDescription": "Squirrel in fall colors",
-      "productSize": "test size",
+      "productSize": "medium",
       "productPrice": 9.99,
       "productImageURL": "https://i.imgur.com/n8GpsqK.jpg",
       "productInStock": true
@@ -31,7 +31,7 @@
       "id": 4,
       "productName": "Winding Trail",
       "productDescription": "Calm contemplative walk through the woods",
-      "productSize": "test size",
+      "productSize": "large",
       "productPrice": 12.99,
       "productImageURL": "https://i.imgur.com/vXpSsYp.jpg",
       "productInStock": true
@@ -40,7 +40,7 @@
       "id": 5,
       "productName": "Mountain Lake",
       "productDescription": "Peaceful summertime on a lake in the mountains",
-      "productSize": "test size",
+      "productSize": "large",
       "productPrice": 12.99,
       "productImageURL": "https://i.imgur.com/Eic51cI.jpg",
       "productInStock": true
@@ -49,7 +49,7 @@
       "id": 6,
       "productName": "Active Stream",
       "productDescription": "Cold mountain stream breaking over rocks",
-      "productSize": "test size",
+      "productSize": "medium",
       "productPrice": 9.99,
       "productImageURL": "https://i.imgur.com/zR3cPUu.jpg",
       "productInStock": false
@@ -58,7 +58,7 @@
       "id": 7,
       "productName": "Mobile Alabama",
       "productDescription": "Downtown Mobile in the springtime",
-      "productSize": "test size",
+      "productSize": "medium",
       "productPrice": 9.99,
       "productImageURL": "https://i.imgur.com/bNGQIbj.jpg",
       "productInStock": true
