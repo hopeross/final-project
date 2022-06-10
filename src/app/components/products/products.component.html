@@ -5,19 +5,17 @@
 
 <div class="searchBar">
     <div class="leftSearchBar">
-        <input matInput type="text" [(ngModel)]="searchPhrase" class="searchBarItem" matTooltip="Search" matTooltipPosition="above">
-        <button (click)="searchByName()" class="searchBarItem">
+        <input matInput type="text" [(ngModel)]="searchPhrase" matTooltip="Search" matTooltipPosition="above">
+        <button (click)="searchByName()">
             <mat-icon>search</mat-icon>
         </button>
     </div>
-    <div class="middleSearchBar">
-        <button (click)="sortAscending()" class="searchBarItem" matTooltip="Sort by title ascending" matTooltipPosition="above">A-Z</button>
-        <button (click)="sortDescending()" class="searchBarItem" matTooltip="Sort by title descending" matTooltipPosition="above">Z-A</button>
-    </div>
     <div class="rightSearchBar">
-        <input matInput type="number" [(ngModel)]="lowNum" class="searchBarItem">
-        <input matInput type="number" [(ngModel)]="highNum" class="searchBarItem">
-        <button (click)="filterByPrice()" class="searchBarItem" matTooltip="Filter by price range" matTooltipPosition="above">
+        <button (click)="sortAscending()" matTooltip="Sort by title ascending" matTooltipPosition="above">A-Z</button>
+        <button (click)="sortDescending()" matTooltip="Sort by title descending" matTooltipPosition="above">Z-A</button>
+        <input type="number" value="10" [(ngModel)]="lowNum" class="searchBarItem">
+        <input type="number" value="20" [(ngModel)]="highNum">
+        <button (click)="filterByPrice()" matTooltip="Filter by price range" matTooltipPosition="above">
             <mat-icon>filter_list</mat-icon>
         </button>
     </div>

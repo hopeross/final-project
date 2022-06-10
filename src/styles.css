@@ -27,21 +27,19 @@ button:hover {
 
 form {
     border: 1px solid #999999;
-    display: flex;
-    flex-direction: column;
     max-width: 50%;
     margin: auto;
     background-color: #CCCCCC;
     margin-top: 1em;
     box-shadow: 2px 3px #675491;
-    padding: 1em;
-    margin-bottom: 1em;
+    font-size: medium;
 }
 
 mat-form-field {
-    margin:0;
+    margin: auto;
     padding: 0;
     background-color: #CCCCCC;
+    max-width: 95%;
 }
 
 mat-label {
@@ -200,7 +198,6 @@ footer {
 }
 
 .searchBar {
-    border: 2px solid hotpink;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -208,6 +205,8 @@ footer {
     font-size: larger;
     align-items: baseline;
 }
+
+
 
 .searchBar label {
     font-size: small;
@@ -228,7 +227,7 @@ footer {
     border-radius: 50%;
 }
 
-.middleSearchBar button {
+.rightSearchBar button {
     margin: 0;
     font-size: large;
 }
@@ -240,3 +239,6 @@ footer {
     color: #675491;
 }
 
+.searchBarItem {
+    margin-left: 1em;
+}
